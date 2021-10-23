@@ -11,4 +11,4 @@ Glitch kullanan arkadaşlar glitche uygun package kullanmalıdır yoksa botunuz 
 Botta MIT lisansı vardır haberiniz olsun benimdir diye dolaşanlara lisans üzerinden gerekli işlemler yapılacaktır
 
 # PROJE HAKKINDA
-botta sadece ``backup-kur rol id`` ile rol dağıtabilirsiniz rolü sileni banlamaz sadece bilgilendirme mesajı için rol ismi/id sini atar şuanlık kanal izni ayarlama yok ama 35 stara ulaştığında hem kanal perm sistemi hemde destekçi tokenler ile dağıtma sistemini ekleyeceğim iyi kullanımlar
+botta sadece ``backup-kur rol id`` ile rol dağıtabilirsiniz rolü sileni banlamaz sadece bilgilendirme mesajı için rol ismi/id sini atar şuanlık kanal izni ayarlama yok ama 35 stara ulaştığında hem kanal perm sistemi hemde destekçi tokenler ile dağıtma sistemini ekleyeceğim danger mod ise eğer false değerini true olarak değiştirirseniz otomatik olarak sunucu rol backıbını almaz buna dikkat edin iyi kullanımlar
