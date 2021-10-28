@@ -53,7 +53,9 @@ client.on("message", message => {
 
     if (command === "backup-kur") {
         const ıd = args[0]
+            if (!ıd) return message.channel.send(embed.setDescription("rol idsi belirt!"))
         const RoleDatabase = db.get(`rolebackup_${message.guild.id}_${ıd}`);
+      if (!RoleDatabase) return message.channel.send(embed.setDescription("Lütfen geçerli bi rol idsi belirtin!"))
         const RoleMembers = db.get(`rolemembers_${message.guild.id}_${ıd}`)
         message.guild.roles.create({
             data: {
