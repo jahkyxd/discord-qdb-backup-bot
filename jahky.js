@@ -9,7 +9,7 @@ moment.locale("tr")
 let danger = false
 
 client.on("rateLimit", function (RateLimitData) {
-    console.log("RATE LIMIT WARN!", RateLimitData)
+    console.log("RATE LIMIT WARN AZ BEKLE KENDİME GELİYİM AYQ!", RateLimitData)
 })
 
 client.on("ready", () => {
