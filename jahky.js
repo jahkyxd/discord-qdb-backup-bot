@@ -69,9 +69,11 @@ client.on("message", message => {
             message.channel.send(embed.setDescription(`Başarıyla ${newRole} (${newRole.id}) rolünün backubını kurdunuz!`))
             client.channels.cache.get(config.channels.logchannel).send(embed.setDescription(`${message.author} tarafından ${newRole} (${newRole.id}) rolünün backubı kullanıldı!`))
             if (!RoleMembers) return console.log(`${newRole.name} olayında veri tabanına kayıtlı üye olmadığı için rol dağıtımı iptal edildi!`)
-            RoleMembers.forEach(member => {
-                if (!member) return console.log(`${member.user.username} adlı üyeyi sunucuda bulamadığım için ${newRole.name} rolünü veremedim!`)
-                message.guild.members.cache.get(member).roles.add(newRole.id).then(x => console.log(`${client.users.cache.get(member).username} Adlı üye ${newRole.name} rolünü aldı!`)).catch(err => console.log(`${err} sebebiyle ${client.users.cache.get(member).username} adlı üye ${newRole.name} rolünü alamadı!`))
+            RoleMembers.forEach((member, index) => {
+                if (!member) return console.log(`${client.users.cache.get(member).username} adlı üyeyi sunucuda bulamadığım için ${newRole.name} rolünü veremedim!`)
+          setTimeout(() => {
+ message.guild.members.cache.get(member).roles.add(newRole.id).then(x => console.log(`${client.users.cache.get(member).username} Adlı üye ${newRole.name} rolünü aldı!`)).catch(err => console.log(`${err} sebebiyle ${client.users.cache.get(member).username} adlı üye ${newRole.name} rolünü alamadı!`))
+          }, index*3000)
             })
         })
 
